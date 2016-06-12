@@ -15,7 +15,7 @@
 
 	<dependencyManagement>
 		<dependencies>
-			
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -28,7 +28,7 @@
 					<version>${maven.war.plugin.version}</version>
 					<configuration>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
-					</configuration>					
+					</configuration>
 				</plugin>
 
 
@@ -36,6 +36,13 @@
 					<groupId>org.eclipse.jetty</groupId>
 					<artifactId>jetty-maven-plugin</artifactId>
 					<version>${maven.jetty.plugin.version}</version>
+					<configuration>
+						<scanIntervalSeconds>10</scanIntervalSeconds>
+						<webApp>
+							<contextPath>/sketon</contextPath>
+						</webApp>
+						<!-- <jettyXml>jetty.xml</jettyXml> -->
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
